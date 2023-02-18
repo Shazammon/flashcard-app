@@ -7,7 +7,7 @@ function App() {
   const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
 
   return (
-
+    <FlashcardList flashcards={flashcards} />
   );
 }
 

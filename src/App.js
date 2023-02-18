@@ -23,7 +23,7 @@ const SAMPLE_FLASHCARDS = [
   {
     id: 2,
   question: "Question 2",
-    answer: '4',
+    answer: 'Answer',
     options: [
       '2',
       '3',

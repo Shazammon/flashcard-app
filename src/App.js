@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Flashcard from "./Flashcard";
+
 import FlashcardList from "./FlashcardList";
 
 function App() {

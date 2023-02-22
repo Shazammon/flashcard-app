@@ -17,6 +17,7 @@ export default function Flashcard({flashcard}) {
           })}
         </div>
       </div>
+      <div className='back'></div>
 
       {flip ? flashcard.answer : flashcard.question}
     </div>

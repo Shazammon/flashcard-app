@@ -8,6 +8,11 @@ export default function Flashcard({flashcard}) {
     <div 
       className={`card ${flip ? 'flip' : ''}`}
       onClick={() => setFlip(!flip)}>
+      
+      <div className="front">
+
+      </div>
+
       {flip ? flashcard.answer : flashcard.question}
     </div>
   )

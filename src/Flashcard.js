@@ -5,7 +5,7 @@ export default function Flashcard({flashcard}) {
   const [flip, setFlip] = useState(false)
 
   return (
-    <div>
+    <div onClick={() => setFlip(!flip)}>
       {flashcard.question}
     </div>
   )

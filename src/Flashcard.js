@@ -6,7 +6,7 @@ export default function Flashcard({flashcard}) {
 
   return (
     <div onClick={() => setFlip(!flip)}>
-      {flashcard.question}
+      {flip ? flashcard.answer : flashcard.question}
     </div>
   )
 }

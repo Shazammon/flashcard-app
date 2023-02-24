@@ -13,13 +13,13 @@ function App() {
     .then(res => {
       res.data.results.map((questionItem, index) => {
         const answer = questionItem.correct_answer
-        const options = 
+        const options = [...questionItem.incorrect_answers, back]
         
         return {
           id: `${index}-${Date.now()}`,
           question: questionItem.question,
           answer: answer,
-          options: 
+          options: options.sort(() => Math.random() - .5)
         }
       })
       console.log(res.data.results)

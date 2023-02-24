@@ -12,7 +12,12 @@ function App() {
     .get(`https://opentdb.com/api.php?amount=10`)
     .then(res => {
       res.data.results.map((questionItem, index) => {
-
+        return {
+          id: `${index}-${Date.now()}`,
+          question: questionItem.question,
+          answer: ,
+          options: 
+        }
       })
       console.log(res.data.results)
     })

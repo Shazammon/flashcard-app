@@ -15,6 +15,10 @@ export default function Flashcard({flashcard}) {
   }
 
   useEffect(setMaxHeight, [flashcard.question, flashcard.answer, flashcard.options])
+  useEffect(() => {
+    window.addEventListener('resize', setMaxHeight)
+    return () => window.removeEventListener('resize', setMaxHeight)
+  }, [])
 
   return (
     <div 

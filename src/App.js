@@ -11,7 +11,7 @@ function App() {
     axios
     .get(`https://opentdb.com/api.php?amount=10`)
     .then(res => {
-      res.data.results.map((questionItem, index) => {
+      setFlashcards(res.data.results.map((questionItem, index) => {
         const answer = questionItem.correct_answer
         const options = [...questionItem.incorrect_answers, answer]
         
@@ -21,7 +21,7 @@ function App() {
           answer: answer,
           options: options.sort(() => Math.random() - .5)
         }
-      })
+      }))
       console.log(res.data.results)
     })
   }, [])

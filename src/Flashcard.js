@@ -7,6 +7,10 @@ export default function Flashcard({flashcard}) {
   const frontEl = useRef()
   const backEl = useRef()
 
+  function setMaxHeight() {
+    
+  }
+
   return (
     <div 
       className={`card ${flip ? 'flip' : ''}`}

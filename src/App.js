@@ -13,7 +13,7 @@ function App() {
     .then(res => {
       res.data.results.map((questionItem, index) => {
         const answer = questionItem.correct_answer
-        const options = [...questionItem.incorrect_answers, back]
+        const options = [...questionItem.incorrect_answers, answer]
         
         return {
           id: `${index}-${Date.now()}`,

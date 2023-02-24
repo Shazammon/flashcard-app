@@ -11,7 +11,10 @@ function App() {
     axios
     .get(`https://opentdb.com/api.php?amount=10`)
     .then(res => {
-      console.log(res.data)
+      res.data.results.map((questionItem, index) => {
+
+      })
+      console.log(res.data.results)
     })
   }, [])
 

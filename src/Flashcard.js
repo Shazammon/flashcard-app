@@ -9,7 +9,7 @@ export default function Flashcard({flashcard}) {
 
   function setMaxHeight() {
     const frontHeight = frontEl.current.getBoundingClientRect().height
-    const frontHeight = frontEl.current.getBoundingClientRect().height
+    const backHeight = backEl.current.getBoundingClientRect().height
   }
 
   return (

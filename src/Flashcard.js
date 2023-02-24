@@ -4,6 +4,9 @@ import React, { useState, useEffect, useRef }from 'react'
 export default function Flashcard({flashcard}) {
   const [flip, setFlip] = useState(false)
 
+  const frontEl = useRef()
+  const backEl = useRef()
+
   return (
     <div 
       className={`card ${flip ? 'flip' : ''}`}

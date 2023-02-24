@@ -3,6 +3,12 @@ body {
     margin: 0;
 }
 
+.card-grid {
+    display: grid;
+    align-items: center;
+    
+}
+
 .card {
     display: flex;
     justify-content: center;

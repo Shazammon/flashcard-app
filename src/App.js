@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import './app.css'
 import FlashcardList from "./FlashcardList";
 import axios from 'axios'
@@ -6,6 +6,17 @@ import axios from 'axios'
 function App() {
 
   const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
+  const [categories, setCategories] = useState([])
+
+  const categoryEl = useRef()
+
+  useEffect(() => {
+    axios
+      .get(`https://opentdb.com/api_category.php`)
+      .then(res => {
+        setCategories(res.data.trivia_categories)
+      })
+  }, [])
 
   useEffect(() => {
     axios
@@ -32,11 +43,30 @@ function App() {
     return textArea.value
   }
 
-  return (
-    <div className="container">
-      <FlashcardList flashcards={flashcards} />
+  function handleSubmit(e) {
+    e.preventDefault()
 
-    </div>
+  }
+  return (
+    <>
+      <form className="header" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="category">Category</label>
+          <select id="category" ref={categoryEl}>
+            {categories.map(category => {
+              return <option ></option>
+            })}
+
+          </select>
+
+        </div>
+
+      </form>
+      <div className="container">
+        <FlashcardList flashcards={flashcards} />
+
+      </div>
+    </>
   );
 }
 

@@ -27,7 +27,9 @@ function App() {
   }, [])
 
   function decodeString(str) {
-    
+    textArea = document.createElement('textarea')
+    textArea.innerHTML = str
+    return textArea.value
   }
 
   return (

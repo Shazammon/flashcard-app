@@ -12,6 +12,8 @@ function App() {
     .get(`https://opentdb.com/api.php?amount=10`)
     .then(res => {
       res.data.results.map((questionItem, index) => {
+        const answer = questionItem.question
+        
         return {
           id: `${index}-${Date.now()}`,
           question: questionItem.question,

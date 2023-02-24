@@ -14,9 +14,7 @@ export default function Flashcard({flashcard}) {
     setHeight(Math.max(frontHeight, backHeight, 100))
   }
 
-  useEffect(() => {
-
-  }, [flashcard.question, flashcard.answer, flashcard.options])
+  useEffect(setMaxHeight, [flashcard.question, flashcard.answer, flashcard.options])
 
   return (
     <div 

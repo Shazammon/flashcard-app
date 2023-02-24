@@ -9,7 +9,7 @@ export default function Flashcard({flashcard}) {
       className={`card ${flip ? 'flip' : ''}`}
       onClick={() => setFlip(!flip)}>
       
-      <div className="front">
+      <div className="front" ref={frontEl}>
         {flashcard.question}
         <div className="flashcard-options">
           {flashcard.options.map(option => {
@@ -17,7 +17,7 @@ export default function Flashcard({flashcard}) {
           })}
         </div>
       </div>
-      <div className='back'>{flashcard.answer}</div>
+      <div className='back' ref={backEl}>{flashcard.answer}</div>
 
       {/* {flip ? flashcard.answer : flashcard.question} */}
     </div>

@@ -7,8 +7,6 @@ function App() {
 
   const [flashcards, setFlashcards] = useState([])
   const [categories, setCategories] = useState([])
-  const emailRef = useRef()
-  constpasswordRef = useRef()
 
   const categoryEl = useRef()
   const amountEl = useRef()
@@ -98,6 +96,7 @@ function App() {
         <div className="form-group">
           <label htmlFor="amount">Number of Questions</label>
           <input type="number" id="amount" min="1" step="1" defaultValue={10} ref={amountEl} />
+        
         </div>
         
         <div className="form-group">

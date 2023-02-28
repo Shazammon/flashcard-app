@@ -31,6 +31,7 @@ function App() {
 
   function onSubmit(e) {
     e.preventDefault()
+    console.log({email: emailRef.current.value, password: passwordRef.current.value})
   }
 
   useEffect(() => {

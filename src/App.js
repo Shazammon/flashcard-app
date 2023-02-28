@@ -73,6 +73,9 @@ function App() {
 
         // when you have multiple set states in a row react bunches them all together and changes it all at once
 
+        useEffect(() => {
+          setLoading(true)
+        })
   
 
 

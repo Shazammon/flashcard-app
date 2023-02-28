@@ -7,6 +7,8 @@ function App() {
 
   const [flashcards, setFlashcards] = useState([])
   const [categories, setCategories] = useState([])
+  const emailRef = useRef()
+  constpasswordRef = useRef()
 
   const categoryEl = useRef()
   const amountEl = useRef()
@@ -23,7 +25,7 @@ function App() {
     axios
     .get('link')
     .then(res => {
-      
+
     })
   })
 

@@ -70,7 +70,9 @@ function App() {
     })
 
     function adjustCount(amount) {
-      
+      setCount( => {
+        return currentCount + amount
+      })
     }
 
   }

@@ -21,6 +21,14 @@ function App() {
 
   useEffect(() => {
     axios
+    .get('link')
+    .then(res => {
+      
+    })
+  })
+
+  useEffect(() => {
+    axios
     .get(`https://opentdb.com/api.php?amount=10`)
     .then(res => {
       setFlashcards(res.data.results.map((questionItem, index) => {

@@ -69,6 +69,10 @@ function App() {
       }))
     })
 
+    function adjustCount(amount) {
+      
+    }
+
   }
   return (
     <>
@@ -98,7 +102,7 @@ function App() {
       </div>
 
       <Counter />
-      
+
     </>
   );
 }

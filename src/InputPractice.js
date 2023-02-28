@@ -7,6 +7,10 @@ export function useFetch() {
 
     useEffect(() => {
         setLoading(true)
+        fetch(url)
+        .then(setData)
+        .catch(setError)
+        .finally(()=> setLoading(false))
     })
 
     return { loading, data, error }

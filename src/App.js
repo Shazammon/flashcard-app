@@ -73,8 +73,8 @@ function App() {
       // setCount( => {
       //   return currentCount + amount
       // })
-      setCount(count + amount?
-        // when you have multiple )
+      setCount(count + amount)
+        // when you have multiple set states in a row react bunches them all together and changes it all at once
 
     }
 

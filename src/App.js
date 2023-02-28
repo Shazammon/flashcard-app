@@ -21,13 +21,17 @@ function App() {
       })
   }, [])
 
-  useEffect(() => {
-    axios
-    .get('link')
-    .then(res => {
+  // useEffect(() => {
+  //   axios
+  //   .get('link')
+  //   .then(res => {
 
-    })
-  })
+  //   })
+  // })
+
+  function onSubmit(e) {
+    e.preventDefault()
+  }
 
   useEffect(() => {
     axios

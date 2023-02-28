@@ -96,6 +96,9 @@ function App() {
         <FlashcardList flashcards={flashcards} />
 
       </div>
+
+      <Counter />
+      
     </>
   );
 }

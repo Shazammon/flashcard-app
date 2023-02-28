@@ -70,9 +70,12 @@ function App() {
     })
 
     function adjustCount(amount) {
-      setCount( => {
-        return currentCount + amount
-      })
+      // setCount( => {
+      //   return currentCount + amount
+      // })
+      setCount(count + amount?
+        // when you have multiple )
+
     }
 
   }

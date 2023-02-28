@@ -6,7 +6,7 @@ export function useFetch() {
     const [error, setError] = useState()
 
     useEffect(() => {
-
+        setLoading(true)
     })
 
     return { loading, data, error }

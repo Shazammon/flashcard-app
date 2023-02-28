@@ -19,18 +19,7 @@ function App() {
       })
   }, [])
 
-  // useEffect(() => {
-  //   axios
-  //   .get('link')
-  //   .then(res => {
 
-  //   })
-  // })
-
-  function onSubmit(e) {
-    e.preventDefault()
-    console.log({email: emailRef.current.value, password: passwordRef.current.value})
-  }
 
   useEffect(() => {
     axios
